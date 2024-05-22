@@ -1,0 +1,23 @@
+body{
+    font-family: "Inter", sans-serif;
+    background-color: rgb(150, 44, 44)
+    }
+.title{
+    font-weight: 800;    ;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center; 
+    color: white;
+    margin: 50px 0px 8px 0px;
+}
+
+.selectLetter {
+    border: rgb(255, 255, 255);
+    outline: none;           
+    background: white;          
+    width: 5%;                  
+    margin: 100px auto;         
+}
+
+/* Hay que hacer que el actor solo pueda escribir una sola
+palabra*/
