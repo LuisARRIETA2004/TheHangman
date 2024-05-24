@@ -65,3 +65,10 @@ html {
   font-size: 18px;
   display: flex;
 }
+
+
+.descripcion{
+  font-size: 18px;
+  text-align: center;
+  margin: 50px 100px 8px 100px;
+}
