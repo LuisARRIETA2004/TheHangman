@@ -6,22 +6,16 @@ html {
   background: #000428;
   color: #ffffff;
   overflow: hidden;
-  background-image: radial-gradient(
-      rgb(216, 0, 0),
+  background-image: radial-gradient(rgb(216, 0, 0),
       rgba(255, 0, 0, 0.2) 2px,
-      transparent 40px
-    ),
+      transparent 40px),
     radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
-    radial-gradient(
-      rgb(255, 0, 0),
+    radial-gradient(rgb(255, 0, 0),
       rgba(255, 255, 255, 0.1) 2px,
-      transparent 40px
-    ),
-    radial-gradient(
-      rgba(0, 0, 0, 0.4),
+      transparent 40px),
+    radial-gradient(rgba(0, 0, 0, 0.4),
       rgba(255, 66, 66, 0.1) 2px,
-      transparent 30px
-    );
+      transparent 30px);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 100px 200px, 300px 300px, 450px 100px;
   overflow-x: hidden;
@@ -38,27 +32,36 @@ html {
   text-shadow: 3px 3px #ff0000;
 }
 
-.selectLetter {
-  border: rgb(255, 255, 255);
-  outline: none;
-  background: white;
-  width: 5%;
-  margin: 100px auto;
-}
-
 .registroJugadores {
   text-align: center;
   font-size: 2.5em;
-  color: #ce2424;
+  color: #ff0;
   text-shadow: 3px 3px #000000;
 }
 
-button {
+/* button {
+  background-image: linear-gradient(315deg, #0f0c29 0%, #302b63 74%);
+  border: 1px solid #3498db;
+  color: #ffffff;
+  box-shadow: 0 0 15px #ff0000, 0 0 20px #4f58d1 inset;
+} */
+
+.start {
   background-image: linear-gradient(315deg, #0f0c29 0%, #302b63 74%);
   border: 1px solid #3498db;
   color: #ffffff;
   box-shadow: 0 0 15px #ff0000, 0 0 20px #4f58d1 inset;
 }
 
-/* Hay que hacer que el actor solo pueda escribir una sola
-palabra*/
+.rank {
+  background-image: linear-gradient(315deg, #0f0c29 0%, yellow 100%);
+  border: 1px solid #b7db34;
+  color: #ffffff;
+  box-shadow: 0 0 15px gold, 0 0 20px gold inset;
+}
+
+.jugador {
+  background-color: white;
+  font-size: 18px;
+  display: flex;
+}
