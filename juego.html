@@ -4,32 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./stylesJuego.css" />
     <title>TheHangMan-Game</title>
   </head>
   <body>
-    <button class="back" id="back">
-      Pantalla de inicio
-    </button>
-    
-    <h1 class="title">💀 TheHangman 💀</h1>
+    <div class="main-container">
+
+      <h1  class="title">💀 TheHangman 💀 </h1>
+      <p class="descripcion">
+        ¡Es hora de jugar!, tienes que seleccionar una letra la cual se encuentre
+        en la palabra, si te equivocas 6 veces pierdes, ¡Buena suerte!
+      </p> 
+      <br>
+      <br>
+      <button class="back" id="back">
+        Pantalla de inicio
+      </button>
+      <h1 id="msg-final"></h1>
+      <h3 id="acierto"></h3>
+      <div class="flex-row no-wrap">
+        <h2 class="palabra" id="palabra"></h2>
+        <picture>
+        <img src="imágenes/ahorcado_6.png" alt="" id="image6">
+        <img src="imágenes/ahorcado_5.png" alt="" id="image5">
+        <img src="imágenes/ahorcado_4.png" alt="" id="image4">
+        <img src="imágenes/ahorcado_3.png" alt="" id="image3">
+        <img src="imágenes/ahorcado_2.png" alt="" id="image2">
+        <img src="imágenes/ahorcado_1.png" alt="" id="image1">
+        <img src="imágenes/ahorcado_0.png" alt="" id="image0">
+        </picture>
+      </div>
+      <div class="flex-row" id="turnos">
+        <div class="col">
+          <h3>Intentos restantes: <span id="intentos">6</span></h3>
+        </div>
+        <div class="col">
+          <button onclick="otraPalabra()" id="reset">Elegir otra palabra</button>
+          <button onclick="pista()" id="pista">¡Pista!</button>
+          <span id="hueco-pista"></span>
+        </div>
+        </div>
+      
+      <div class="flex-row">
+        <div class="col">
+          <div class="flex-row" id="abcdario">
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+
+    </div>
+    <script src="juego.js" type="text/JavaScript"></script>
+  </body>
+</html>
+
+
+<!--     
     <p class="descripcion">
       ¡Es hora de jugar!, tienes que seleccionar una letra la cual se encuentre
       en la palabra, si te equivocas 10 veces pierdes, ¡Buena suerte!
-    </p>
+    </p> -->
 
     
     <!-- Este script refresca la pagina, lo dejare aca ya que es importante -->
-    <button class="reset" id="reset" type="reset" onclick="javascript:window.location.reload();">Volver a Jugar</button>
+    <!-- <button class="reset" id="reset" type="reset" onclick="javascript:window.location.reload();">Volver a Jugar</button>
     <br />
-    
+     -->
     <!-- Pondre esto para saber cual palabra hay que advinar mientras tanto -->
-    <p class="palabra" id="palabra"></p>
+    <!-- <p class="palabra" id="palabra"></p>
     <br />
-    <br />
+    <br /> -->
     <!-- Teclado (Lo dejare sin ñ) se identificara
     si el id se encuentra dentro del string de la palabra -->
-    <button class="teclado" id="A">A</button>
+    <!-- <button class="teclado" id="A">A</button>
     <button class="teclado" id="B">B</button>
     <button class="teclado" id="C">C</button>
     <button class="teclado" id="D">D</button>
@@ -54,9 +101,4 @@
     <button class="teclado" id="W">W</button>
     <button class="teclado" id="X">X</button>
     <button class="teclado" id="Y">Y</button>
-    <button class="teclado" id="Z">Z</button>
-
-
-    <script src="juego.js" type="text/JavaScript"></script>
-  </body>
-</html>
+    <button class="teclado" id="Z">Z</button> -->
