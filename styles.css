@@ -6,16 +6,22 @@ html {
   background: #000428;
   color: #ffffff;
   overflow: hidden;
-  background-image: radial-gradient(rgb(216, 0, 0),
+  background-image: radial-gradient(
+      rgb(216, 0, 0),
       rgba(255, 0, 0, 0.2) 2px,
-      transparent 40px),
+      transparent 40px
+    ),
     radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
-    radial-gradient(rgb(255, 0, 0),
+    radial-gradient(
+      rgb(255, 0, 0),
       rgba(255, 255, 255, 0.1) 2px,
-      transparent 40px),
-    radial-gradient(rgba(0, 0, 0, 0.4),
+      transparent 40px
+    ),
+    radial-gradient(
+      rgba(0, 0, 0, 0.4),
       rgba(255, 66, 66, 0.1) 2px,
-      transparent 30px);
+      transparent 30px
+    );
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 100px 200px, 300px 300px, 450px 100px;
   overflow-x: hidden;
@@ -36,7 +42,7 @@ html {
   text-align: center;
   font-size: 2.5em;
   color: #ff0;
-  text-shadow: 3px 3px #000000;
+  text-shadow: 3px 3px #4e5311;
 }
 
 /* button {
@@ -62,13 +68,42 @@ html {
 
 .jugador {
   background-color: white;
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
+  width: 300px;
+  margin: 7px 0;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
+.jugador::placeholder {
+  font-size: 13px;
+}
 
-.descripcion{
+.descripcion {
   font-size: 18px;
   text-align: center;
   margin: 50px 100px 8px 100px;
+}
+
+#configuración {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start,
+.rank {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+  margin: 9px 0;
+}
+
+.start:hover,
+.rank:hover {
+  transform: translateX(10px);
 }
