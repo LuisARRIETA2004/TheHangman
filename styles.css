@@ -104,6 +104,33 @@ html {
 }
 
 .start:hover,
-.rank:hover {
-  transform: translateX(10px);
+.rank:hover,
+.teclado:hover{
+  transform: translateY(5px);
+  transform: scale(1.1);
+}
+
+.reset {
+  display: flex;
+}
+.teclado {
+  align-items: center;
+  background-color: rgba(0, 255, 0, 0.699);
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border:rgb(216, 0, 0);
+  cursor: pointer;
+  margin: 0px 45px 5px 45px;
+  transform: scale(1);
+}
+
+.palabra {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 100%;
+  text-align: center;
+  color: white;
+  margin: 50px 0px 8px 0px;
+  text-shadow: 3px 3px #6f00ff;
 }

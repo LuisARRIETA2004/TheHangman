@@ -8,10 +8,55 @@
     <title>TheHangMan-Game</title>
   </head>
   <body>
+    <button class="back" id="back">
+      Pantalla de inicio
+    </button>
+    
     <h1 class="title">💀 TheHangman 💀</h1>
     <p class="descripcion">
       ¡Es hora de jugar!, tienes que seleccionar una letra la cual se encuentre
       en la palabra, si te equivocas 10 veces pierdes, ¡Buena suerte!
     </p>
+
+    
+    <!-- Este script refresca la pagina, lo dejare aca ya que es importante -->
+    <button class="reset" id="reset" type="reset" onclick="javascript:window.location.reload();">Volver a Jugar</button>
+    <br />
+    
+    <!-- Pondre esto para saber cual palabra hay que advinar mientras tanto -->
+    <p class="palabra" id="palabra"></p>
+    <br />
+    <br />
+    <!-- Teclado (Lo dejare sin ñ) se identificara
+    si el id se encuentra dentro del string de la palabra -->
+    <button class="teclado" id="A">A</button>
+    <button class="teclado" id="B">B</button>
+    <button class="teclado" id="C">C</button>
+    <button class="teclado" id="D">D</button>
+    <button class="teclado" id="E">E</button>
+    <button class="teclado" id="F">F</button>
+    <button class="teclado" id="G">G</button>
+    <button class="teclado" id="H">H</button>
+    <button class="teclado" id="I">I</button>
+    <button class="teclado" id="J">J</button>
+    <button class="teclado" id="K">K</button>
+    <button class="teclado" id="L">L</button>
+    <button class="teclado" id="M">M</button>
+    <button class="teclado" id="N">N</button>
+    <button class="teclado" id="O">O</button>
+    <button class="teclado" id="P">P</button>
+    <button class="teclado" id="Q">Q</button>
+    <button class="teclado" id="R">R</button>
+    <button class="teclado" id="S">S</button>
+    <button class="teclado" id="T">T</button>
+    <button class="teclado" id="U">U</button>
+    <button class="teclado" id="V">V</button>
+    <button class="teclado" id="W">W</button>
+    <button class="teclado" id="X">X</button>
+    <button class="teclado" id="Y">Y</button>
+    <button class="teclado" id="Z">Z</button>
+
+
+    <script src="juego.js" type="text/JavaScript"></script>
   </body>
 </html>
