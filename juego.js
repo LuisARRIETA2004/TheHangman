@@ -72,6 +72,28 @@ function generaABC (a,z) {
   }
 }
 
+//Setea las variables para que empiecen en 0
+var pto1 = 0;
+var pto2 = 0;
+var pto3 = 0;
+var pto4 = 0;
+
+document.getElementById("p1").value = pto1;
+document.getElementById("p2").value = pto2;
+document.getElementById("p3").value = pto3;
+document.getElementById("p4").value = pto4;
+
+         
+//Estp se encarga de seleccionar el turno de cada jugador
+document.addEventListener("DOMContentLoaded", function() {
+  var indexJugador = localStorage.getItem("indexJugador") || 1;
+  indexJugador = parseInt(indexJugador) % 4 + 1;
+  localStorage.setItem("indexJugador", indexJugador);
+  document.getElementById("indexJugador").value = indexJugador;
+});
+
+
+
 
 // Chequear intento
 function intento(letra) {
@@ -105,18 +127,37 @@ function pista() {
   huecoAMostrar.style.color = "black"; 
 }
 
-// Compruba si ha finalizado
+// Comprueba si ha finalizado
 function compruebaFin() {
   if( oculta.indexOf("_") == -1 ) {
     document.getElementById("msg-final").innerHTML = "¡¡ Felicidades !!";
     document.getElementById("msg-final").className += "zoom-in";
     document.getElementById("palabra").className += " encuadre";
+
+    //Esto debería sumar puntos en caso que se gane
+    if(indexJugador == 1) {
+      pto1 += 5;
+      document.getElementById("p1").value = pto1;
+    }
+    if(indexJugador == 2) {
+      pto2 += 5;
+      document.getElementById("p2").value = pto2;
+    }
+    if(indexJugador == 3) {
+      pto3 += 5;
+      document.getElementById("p3").value = pto3;
+    }
+    if(indexJugador == 4) {
+      pto4 += 5;
+      document.getElementById("p4").value = pto4;
+    }
+
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
     document.getElementById("reset").innerHTML = "Empezar";
     btnInicio.onclick = function() { location.reload() };
-  }else if( cont == 0 ) {
+  } else if( cont == 0 ) {
     document.getElementById("msg-final").innerHTML = "Game Over";
     document.getElementById("msg-final").className += "zoom-in";
     for (var i = 0; i < buttons.length; i++) {
@@ -126,6 +167,7 @@ function compruebaFin() {
     btnInicio.onclick = function () { location.reload() };
   }
 }
+
 
 // Restablecer juego
 function otraPalabra() {
