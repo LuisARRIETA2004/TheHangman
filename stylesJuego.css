@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  
 }
 
 body {
@@ -39,19 +38,19 @@ body {
   max-width: 1300px;
   margin: auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #e9eaec;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
 }
 
 h1.title {
-  margin: 20px auto 40px auto; /* Reducir el margen inferior y superior */
+  margin: 10px auto 10px auto; /* Reducir el margen inferior y superior */
   text-align: center;
   font-family: 'Pacifico', cursive;
   color: #333;
   font-weight: 800;
-  font-size: 40px; /* Reducir el tamaño de fuente */
+  font-size: 34px; /* Reducir el tamaño de fuente */
   line-height: 100%;
   text-shadow: 3px 3px #ff0000;
 }
@@ -61,7 +60,7 @@ h1#msg-final {
   color: #e74c3c;
   transition: all 0.5s ease;
   transform: scale(0);
-  min-height: 50px;
+  min-height: 10px;
   margin-bottom: 0;
 }
 
@@ -121,11 +120,11 @@ h2.palabra {
 
 #turnos h3 {
   margin: auto;
-  color: #7f8c8d;
+  color: #343838;
 }
 
 h3 span {
-  color: #e67e22;
+  color: #ff0000c7;
 }
 
 .letra:disabled {
@@ -163,7 +162,7 @@ picture img {
   border: 1px solid #3498db;
   color: #ffffff;
   box-shadow: 0 0 15px #ff0000, 0 0 20px #4f58d1 inset;
-  font-size: 16px;
+  font-size: 15px;
   padding: 8px 16px;
   border-radius: 10px;
   border: none;
@@ -181,4 +180,64 @@ picture img {
   color: #000000; 
 }
 
+h3{
+  color: #000000; 
+}
 
+.letra {
+  margin: 3px; /* Reducido el espacio entre botones */
+  padding: 5px 10px; /* Reducido el tamaño de los botones */
+  background-color: #3f3a35;
+  color: #fff;
+  border: none;
+  border-radius: 3px; /* Ajustado el borde redondeado */
+  cursor: pointer;
+  font-size: 13px; /* Disminuido el tamaño de la fuente */
+  transition: background-color 0.3s;
+}
+
+input[readonly] {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-bottom: 3px;
+  width: 160px;
+  text-align: center;
+}
+
+#jugadorActual{
+  padding: 6px 10px;
+  border: 1px solid #ff7d7d;
+  background-color: #e4e4e4;
+}
+
+#indexJugador{
+  padding: 6px 10px;
+  border: 1px solid #ff7d7d;
+  background-color: #e4e4e4;
+}
+
+#reset{
+  background-color: #ffffff;
+  border: 1px solid #2e0491;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin: 10 2px;
+  width: auto;
+  text-align: center;
+}
+
+#pista{
+  background-color: #ffffff;
+  border: 1px solid #250472;
+  border-radius: 4px;
+  padding: 4px 9px;
+  font-size: 12px;
+  margin-bottom: 3px;
+  margin: 10 2px;
+  width: auto;
+  text-align: center;
+}

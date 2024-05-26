@@ -58,7 +58,7 @@ function pintarGuiones(num) {
   hueco.innerHTML = oculta.join("");
 }
 
-//Generar abecedario
+// Generar abecedario
 function generaABC (a,z) {
   document.getElementById("abcdario").innerHTML = "";
   var i = a.charCodeAt(0), j = z.charCodeAt(0);
@@ -93,8 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-
 // Chequear intento
 function intento(letra) {
   document.getElementById(letra).disabled = true;
@@ -127,7 +125,7 @@ function pista() {
   huecoAMostrar.style.color = "black"; 
 }
 
-// Comprueba si ha finalizado
+
 function compruebaFin() {
   if( oculta.indexOf("_") == -1 ) {
     document.getElementById("msg-final").innerHTML = "¡¡ Felicidades !!";
@@ -167,7 +165,6 @@ function compruebaFin() {
     btnInicio.onclick = function () { location.reload() };
   }
 }
-
 
 // Restablecer juego
 function otraPalabra() {

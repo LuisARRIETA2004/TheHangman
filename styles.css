@@ -131,4 +131,9 @@ html {
 
 
 
-
+@media (min-width: 768px) {
+  #configuracion {
+      max-width: 600px;
+      margin: auto;
+  }
+}

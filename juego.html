@@ -9,7 +9,6 @@
   </head>
   <body>
     <div class="main-container">
-
       <button class="back" id="back">
         Pantalla de inicio
       </button>
@@ -18,7 +17,7 @@
         ¡Es hora de jugar! Si te equivocas 6 veces pierdes, ¡Buena suerte!
       </p> 
       <!-- Lista de jugadores, el readonly sirve para que el input no sea modificable -->
-      <h2>Lista de jugadores</h2>
+      <!-- <h2>Lista de jugadores</h2> -->
       <input id="jugador1" readonly> 
       <input id="jugador2" readonly> 
       <input id="jugador3" readonly> 
@@ -30,7 +29,7 @@
       <input id="p4" readonly>
 
       <!-- El h3 aparece en color blanco -->
-      <h3>Es el turno de: </h3>
+      <h3>  Es el turno de: </h3>
       <input id="jugadorActual" readonly>
       <input id="indexJugador" readonly>
       
@@ -53,7 +52,7 @@
           <h3>Intentos restantes: <span id="intentos">6</span></h3>
         </div>
         <div class="col">
-          <button onclick="otraPalabra()" id="reset">Elegir otra palabra</button>
+          <button onclick="otraPalabra()" id="reset">Elegir palabra</button>
           <button onclick="pista()" id="pista">¡Pista!</button>
           <span id="hueco-pista"></span>
         </div>
