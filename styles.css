@@ -81,12 +81,6 @@ html {
   font-size: 13px;
 }
 
-.descripcion {
-  font-size: 18px;
-  text-align: center;
-  margin: 50px 100px 8px 100px;
-}
-
 #configuración {
   display: flex;
   flex-direction: column;

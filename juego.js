@@ -97,8 +97,12 @@ function intento(letra) {
 }
 
 // Obtener pista
+
 function pista() {
-  document.getElementById("hueco-pista").innerHTML = palabras[rand][1];
+
+  const huecoAMostrar = document.getElementById("hueco-pista");
+  huecoAMostrar.innerHTML = palabras[rand][1];
+  huecoAMostrar.style.color = "black"; 
 }
 
 // Compruba si ha finalizado
