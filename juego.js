@@ -1,21 +1,28 @@
 const buttonElement = document.getElementById("back");
 
-//No funciona el comando para volver al menu
 buttonElement.addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
 
-//posibles palabras
-// var palabras_array = ["SAMAN", "UNIVERSIDAD", "VENEZUELA",
-// "SISTEMAS", "VARIABLE", "DATO", "ALGORITMO", "PROGRAMACION",
-// "FERIA", "METROPOLITANA", "MODULO", "CLASE", "FUNCION", "ARREGLO",
-// "CONDICIONAL"];
+// let listaJugadores = [];
 
-//Esto elige la palabra aleatoria
-// var palabraAleatoria =
-//   palabras_array[Math.floor(Math.random() * palabras_array.length)];
-// document.getElementById("palabra").textContent = palabraAleatoria;
+// // Esto supuestamente guarda el nombre
+// document.getElementById("start").addEventListener("click", function() {
+  
+//   listaJugadores.push(document.getElementById("jugador1").value);
+//   listaJugadores.push(document.getElementById("jugador2").value);
+//   listaJugadores.push(document.getElementById("jugador3").value);
+//   listaJugadores.push(document.getElementById("jugador4").value);
+
+//   for (let i = 0; i < listaJugadores.length; i++) {
+//     let jugadorActual = listaJugadores[i];
+//     document.getElementById("indexJugador").innerText = jugadorActual;
+//   }
+// });
+
+
+
 
 var palabras = [
   ["SAMAN", "Árbol tropical"],
@@ -146,3 +153,4 @@ function otraPalabra() {
 
 // Iniciar
 window.onload = inicio();
+

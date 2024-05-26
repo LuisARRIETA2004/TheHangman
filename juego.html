@@ -20,6 +20,14 @@
       <button class="back" id="back">
         Pantalla de inicio
       </button>
+      <p>Es el turno de:</p>
+      <h1 id="indexJugador"></h1>
+
+      <script>
+          //Cada vez que toco los scripts todo explota asi que dejare esto aca, si quieres lo mueves
+          let jugadores = JSON.parse(localStorage.getItem('jugadores'));
+          document.getElementById('primerJugador').innerText = jugadores[0];
+      </script>
       <h1 id="msg-final"></h1>
       <h3 id="acierto"></h3>
       <div class="flex-row no-wrap">
@@ -55,6 +63,7 @@
 
     </div>
     <script src="juego.js" type="text/JavaScript"></script>
+    <script src="utilities.js" type="text/JavaScript"></script>
   </body>
 </html>
 
