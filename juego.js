@@ -40,9 +40,6 @@ var buttons = document.getElementsByClassName('letra');
 var btnInicio = document.getElementById("reset");
 
 
-
-// ### FUNCIONES ###
-
 // Escoger palabra al azar
 function generaPalabra() {
   rand = (Math.random() * 19).toFixed(0);
@@ -58,7 +55,7 @@ function pintarGuiones(num) {
   hueco.innerHTML = oculta.join("");
 }
 
-// Generar abecedario
+//Generar abecedario
 function generaABC (a,z) {
   document.getElementById("abcdario").innerHTML = "";
   var i = a.charCodeAt(0), j = z.charCodeAt(0);
@@ -125,30 +122,25 @@ function pista() {
   huecoAMostrar.style.color = "black"; 
 }
 
-
+// Comprueba si ha finalizado
 function compruebaFin() {
+  let congratulationsMessage;
+  if (oculta.indexOf("_") == -1) {
+
+    congratulationsMessage = "¡¡ Felicidades !!";
+
+    puntos();
+  } else if (cont == 0) {
+    congratulationsMessage = "Game Over";
+    puntos();
+  }
+
   if( oculta.indexOf("_") == -1 ) {
-    document.getElementById("msg-final").innerHTML = "¡¡ Felicidades !!";
+    document.getElementById("msg-final").innerHTML = congratulationsMessage;
     document.getElementById("msg-final").className += "zoom-in";
     document.getElementById("palabra").className += " encuadre";
-
-    //Esto debería sumar puntos en caso que se gane
-    if(indexJugador == 1) {
-      pto1 += 5;
-      document.getElementById("p1").value = pto1;
-    }
-    if(indexJugador == 2) {
-      pto2 += 5;
-      document.getElementById("p2").value = pto2;
-    }
-    if(indexJugador == 3) {
-      pto3 += 5;
-      document.getElementById("p3").value = pto3;
-    }
-    if(indexJugador == 4) {
-      pto4 += 5;
-      document.getElementById("p4").value = pto4;
-    }
+    //Se ejecuta la funcion de los puntos
+    puntos()
 
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
@@ -158,6 +150,9 @@ function compruebaFin() {
   } else if( cont == 0 ) {
     document.getElementById("msg-final").innerHTML = "Game Over";
     document.getElementById("msg-final").className += "zoom-in";
+    //Se ejecuta la funcion de los puntos
+    puntos()
+
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
@@ -165,6 +160,56 @@ function compruebaFin() {
     btnInicio.onclick = function () { location.reload() };
   }
 }
+
+function prueba() {
+  document.getElementById("p1").value = pto1;
+}
+prueba();
+
+
+function puntos() {
+  // Aquí debes tener una condición para determinar si el jugador gana o pierde
+  if (oculta.indexOf("_") == -1) { // Por ejemplo, si el jugador completa la palabra
+    switch (indexJugador) {
+      case 1:
+        pto1 += 10;
+        document.getElementById("p1").value = pto1;
+        break;
+      case 2:
+        pto2 += 10;
+        document.getElementById("p2").value = pto2;
+        break;
+      case 3:
+        pto3 += 10;
+        document.getElementById("p3").value = pto3;
+        break;
+      case 4:
+        pto4 += 10;
+        document.getElementById("p4").value = pto4;
+        break;
+    }
+  } else if (cont == 0) { // Si el jugador pierde todas las oportunidades
+    switch (indexJugador) {
+      case 1:
+        pto1 -= 5;
+        document.getElementById("p1").value = pto1;
+        break;
+      case 2:
+        pto2 -= 5;
+        document.getElementById("p2").value = pto2;
+        break;
+      case 3:
+        pto3 -= 5;
+        document.getElementById("p3").value = pto3;
+        break;
+      case 4:
+        pto4 -= 5;
+        document.getElementById("p4").value = pto4;
+        break;
+    }
+  }
+}
+
 
 // Restablecer juego
 function otraPalabra() {
@@ -177,4 +222,3 @@ function otraPalabra() {
 
 // Iniciar
 window.onload = inicio();
-
