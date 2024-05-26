@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="configuración">
-      <h1 class="title">💀 TheHangman 💀</h1>
+      <h1 class="title">TheHangman</h1>
       <br />
       <h2 class="registroJugadores">Registro de jugadores</h2>
       <input
@@ -50,12 +50,22 @@
       </button>
     </div>
 
+    <!-- Almacena los nombres de cada jugador para pasarlos al juego.html -->
+    <script>
+      document.getElementById('start').addEventListener('click', function() {
+          localStorage.setItem("player1", document.getElementById("jugador1").value);
+          localStorage.setItem("player2", document.getElementById("jugador2").value);
+          localStorage.setItem("player3", document.getElementById("jugador3").value);
+          localStorage.setItem("player4", document.getElementById("jugador4").value);
+          window.location.href = 'Prueba2.html';
+      });
+    </script>
+
     <div id="letter">
       <section class="userLetter">
         <!-- <button type="button" class="confirm">Confirmar</button> -->
       </section>
     </div>
     <script src="utilities.js" type="text/JavaScript"></script>
-    <script src="juego.js" type="text/JavaScript"></script>
   </body>
 </html>

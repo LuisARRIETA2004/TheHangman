@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="./stylesJuego.css" />
     <title>TheHangMan-Game</title>
   </head>
+
+
+
   <body>
     <div class="main-container">
+
 
       <h1  class="title">💀 TheHangman 💀 </h1>
       <p class="descripcion">
@@ -20,14 +24,19 @@
       <button class="back" id="back">
         Pantalla de inicio
       </button>
-      <p>Es el turno de:</p>
-      <h1 id="indexJugador"></h1>
 
-      <script>
-          //Cada vez que toco los scripts todo explota asi que dejare esto aca, si quieres lo mueves
-          let jugadores = JSON.parse(localStorage.getItem('jugadores'));
-          document.getElementById('primerJugador').innerText = jugadores[0];
-      </script>
+      <!-- Lista de jugadores, el readonly sirve para que el input no sea modificable -->
+      <h2>Lista de jugadores</h2>
+      <input id="jugador1" readonly> <p>puntos:</p> 
+      <br>
+      <input id="jugador2" readonly> <p>puntos:</p> 
+      <br>
+      <input id="jugador3" readonly> <p>puntos:</p> 
+      <br>
+      <input id="jugador4" readonly> <p>puntos:</p> 
+      
+
+
       <h1 id="msg-final"></h1>
       <h3 id="acierto"></h3>
       <div class="flex-row no-wrap">
@@ -64,6 +73,22 @@
     </div>
     <script src="juego.js" type="text/JavaScript"></script>
     <script src="utilities.js" type="text/JavaScript"></script>
+
+          <!-- Esto pasa el id de un html al otro  -->
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var j1 = localStorage.getItem("player1");
+                var j2 = localStorage.getItem("player2");
+                var j3 = localStorage.getItem("player3");
+                var j4 = localStorage.getItem("player4");
+    
+                document.getElementById("jugador1").value = j1;
+                document.getElementById("jugador2").value = j2;
+                document.getElementById("jugador3").value = j3;
+                document.getElementById("jugador4").value = j4;
+            });
+            
+        </script>
   </body>
 </html>
 

@@ -5,25 +5,6 @@ buttonElement.addEventListener("click", function () {
 });
 
 
-// let listaJugadores = [];
-
-// // Esto supuestamente guarda el nombre
-// document.getElementById("start").addEventListener("click", function() {
-  
-//   listaJugadores.push(document.getElementById("jugador1").value);
-//   listaJugadores.push(document.getElementById("jugador2").value);
-//   listaJugadores.push(document.getElementById("jugador3").value);
-//   listaJugadores.push(document.getElementById("jugador4").value);
-
-//   for (let i = 0; i < listaJugadores.length; i++) {
-//     let jugadorActual = listaJugadores[i];
-//     document.getElementById("indexJugador").innerText = jugadorActual;
-//   }
-// });
-
-
-
-
 var palabras = [
   ["SAMAN", "Árbol tropical"],
   ["UNIVERSIDAD", "Institución educativa"],
