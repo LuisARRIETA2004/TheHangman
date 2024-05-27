@@ -44,14 +44,26 @@
       </button>
     <!-- Almacena los nombres de cada jugador para pasarlos al juego.html -->
     <script>
-      document.getElementById('start').addEventListener('click', function() {
-          localStorage.setItem("player1", document.getElementById("jugador1").value);
-          localStorage.setItem("player2", document.getElementById("jugador2").value);
-          localStorage.setItem("player3", document.getElementById("jugador3").value);
-          localStorage.setItem("player4", document.getElementById("jugador4").value);
-          window.location.href = 'Prueba2.html';
+      document.getElementById('start').addEventListener('click', function(event) {
+          var jugador1 = document.getElementById("jugador1").value;
+          var jugador2 = document.getElementById("jugador2").value;
+          var jugador3 = document.getElementById("jugador3").value;
+          var jugador4 = document.getElementById("jugador4").value;
+
+          if (!jugador1 || !jugador2 || !jugador3 || !jugador4) {
+              alert("Es recomendable que identifique el nombre de cada jugador");
+
+              event.preventDefault();
+              return;
+          }
+
+          localStorage.setItem("player1", jugador1);
+          localStorage.setItem("player2", jugador2);
+          localStorage.setItem("player3", jugador3);
+          localStorage.setItem("player4", jugador4);
+
       });
-    </script>
+  </script>
 
     <div id="letter">
       <section class="userLetter">

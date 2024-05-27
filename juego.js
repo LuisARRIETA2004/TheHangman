@@ -40,6 +40,7 @@ var buttons = document.getElementsByClassName('letra');
 var btnInicio = document.getElementById("reset");
 
 //Setea las variables para que empiecen en 0
+
 var pto1 = 0;
 var pto2 = 0;
 var pto3 = 0;
@@ -51,11 +52,11 @@ document.getElementById("p3").value = pto3;
 document.getElementById("p4").value = pto4;
 
          
-
 var indexJugador = localStorage.getItem("indexJugador") || 1;
 indexJugador = parseInt(indexJugador) % 4 + 1;
 localStorage.setItem("indexJugador", indexJugador);
 document.getElementById("indexJugador").value = indexJugador;
+
   
 var numeroEnHTML = parseInt(document.getElementById("indexJugador").value); // Obtiene y almacena el número del HTML
 if(numeroEnHTML > 5) {
@@ -144,22 +145,43 @@ function compruebaFin() {
     document.getElementById("msg-final").innerHTML = congratulationsMessage;
     document.getElementById("msg-final").className += "zoom-in";
     document.getElementById("palabra").className += " encuadre";
-    if (numeroEnHTML == 1) {
-      pto1 = pto1 + 1
-      document.getElementById("p1").value = pto1 + 1;
-    }
-    if (numeroEnHTML == 2) {
-      pto2 = pto2 + 1
-      document.getElementById("p2").value = pto1 + 2;
-    }
-    if (numeroEnHTML == 3) {
-      pto3 = pto3 + 1
-      document.getElementById("p3").value = pto1 + 3;
-    }
-    if (numeroEnHTML == 4) {
-      pto4 = pto4 + 1
-      document.getElementById("p4").value = pto1 + 4;
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+      var indexJugador = localStorage.getItem("indexJugador") || 1;
+      indexJugador = parseInt(indexJugador) % 4 + 1;
+      localStorage.setItem("indexJugador", indexJugador);
+      document.getElementById("indexJugador").value = indexJugador;
+    
+      var numeroEnHTML = parseInt(document.getElementById("indexJugador").value); // Obtiene y almacena el número del HTML
+    
+      // Recuperar los puntos desde el localStorage o ponerlos a 0 si es la primera visita
+      var pto1 = localStorage.getItem("pto1") || 0;
+      var pto2 = localStorage.getItem("pto2") || 0;
+      var pto3 = localStorage.getItem("pto3") || 0;
+      var pto4 = localStorage.getItem("pto4") || 0;
+    
+      // Aumentar los puntos según el número de jugador y actualizar el localStorage
+      if (numeroEnHTML == 1) {
+        pto1 = parseInt(pto1) + 1;
+        localStorage.setItem("pto1", pto1);
+        document.getElementById("p1").value = pto1;
+      }
+      if (numeroEnHTML == 2) {
+        pto2 = parseInt(pto2) + 1;
+        localStorage.setItem("pto2", pto2);
+        document.getElementById("p2").value = pto2;
+      }
+      if (numeroEnHTML == 3) {
+        pto3 = parseInt(pto3) + 1;
+        localStorage.setItem("pto3", pto3);
+        document.getElementById("p3").value = pto3;
+      }
+      if (numeroEnHTML == 4) {
+        pto4 = parseInt(pto4) + 1;
+        localStorage.setItem("pto4", pto4);
+        document.getElementById("p4").value = pto4;
+      }
+    });
+    
     //Se ejecuta la funcion de los puntos
     puntos()
 
